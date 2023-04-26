@@ -1,22 +1,10 @@
 "use strict";
-class Circle {
-    constructor(radius) {
-        this.radius = radius;
-    }
-    getArea() {
-        return this.radius * this.radius * Math.PI;
-    }
-}
-class Rectangle {
-    constructor(width, height) {
-        this.width = width;
-        this.height = height;
-    }
-    getArea() {
-        return this.width * this.height;
-    }
-}
-const shapes = [new Circle(5), new Rectangle(10, 5)];
-shapes.forEach((shape) => {
-    console.log(shape.getArea());
-});
+const person = {
+    name: '김사람',
+    age: 20
+};
+const expert = {
+    name: "r김 개발",
+    skills: ['react', 'typescripts', 'javascripts']
+};
+const poeple = [person, expert];
