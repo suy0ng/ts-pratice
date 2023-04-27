@@ -1,20 +1,39 @@
-interface Person {
-  name : string;
-  age?: number;  // 물음표가 들어갔다는 것은, 설정을 해도 되고 안해도 되는 값이라는 것을 의미합니다.
+// 예제 1
+// function merge(a: any, b: any): any {
+//   return {
+//     ...a,
+//     ...b,
+//   };
+// }
+
+// const merged = merge({ foo: 1 }, { bar: 1 });
+
+// Generic 사용
+// function merge(a: any, b: any): any {
+//   return {
+//     ...a,
+//     ...b
+//   };
+// }
+
+// const merged = merge({ foo: 1 }, { bar: 1 });
+
+//Generic 사용 2
+// function merge<A, B>(a: A, b: B): A & B {
+//   return {
+//     ...a,
+//     ...b,
+//   };
+// }
+
+// const merged = merge({ foo: 1 }, { bar: 1 });
+
+
+// Generic 사용 3
+function wrap<T>(param: T){
+  return{
+    param
+  }
 }
 
-interface Developer extends Person {
-  skills: string[];
-}
-
-const person: Person = {
-  name : '김사람',
-  age: 20
-}
-
-const expert: Developer = {
-  name : "김 개발",
-  skills:['react','typescripts','javascripts']
-}
-
-const poeple: Person[] = [person, expert];
+const wrapped = wrap(10);
